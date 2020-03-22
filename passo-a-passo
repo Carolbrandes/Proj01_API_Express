@@ -1,0 +1,16 @@
+1) no terminal entrar na pasta do projeto
+2) criar o package.json c/ comando: npm init -y
+3) instalar o express em uma versao exata: npm i --save express@4.16.2 -E 
+4) no arquivo package.json ja vai aparecer o express como dependencia.
+5) criar a pasta src (que vai ter o cod fonte) > criar o arquivo servidor.js (vai ser nosso servidor web que vai servir para criarmos nossos webservices)
+6) No arquivo servidor.js definir a porta, importar o express, instanciar o express, definir a resposta para a requisicao get em cima de /produto e informar qual a porta q vai ficar escutando a requisição.
+7) no package.json alterar o main de index.js para ->  "main": "src/servidor.js"
+8) instalar o nodemon como dependencia de desenvolvimento: npm i --save-dev nodemon@1.14.11 -E
+9) no arquivo package.json nos scripts criar um script "star": "nodemon",
+10) Vamos no postman na requisicao get colocar o endereco -> http://localhost:3003/produtos
+11) Criar o arquivo em src > bancoDeDados.js
+12) Vamos importar o arquivo bancoDeDados no servidor.js e vamos montar as funcoes que fazem as requisicoes get, post
+13) instalar a dependencia body parse para trazer os dados corretos. npm i --save body-parser@1.18.2 -E
+14) Vamos importar o bodyparser no servidor.js e vamos declarar: app.use(bodyParser.urlencoded({ extended: true }))
+15) npm start
+14) requisicao post no postman -> escolher a opçao post, em baixo escolher body, escolher a opçao x-www-form-urlencoded, vamos preencher informando no key e value ou atraves do bulk edit. 
