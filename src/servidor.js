@@ -13,11 +13,13 @@ const bodyParser = require('body-parser')
 // 6) importar o arquivo banco de dados:
 const bd = require('./bancoDeDados')
 
+//3) instanciando o express. Em cima dessa variavel app que vamos colocar nossos serviços.
+const app = express()
+
 // qlq requisicao q vc faca, vai obrigatoriamente passar por esse middleware, se o padrao for urlenconded ele vai transformar em objeto para que nas linhas 40 e 41 consegui acessar o atributo name e preco.
 app.use(bodyParser.urlencoded({ extended: true }))
 
-//3) instanciando o express. Em cima dessa variavel app que vamos colocar nossos serviços.
-const app = express()
+
 
 
 
